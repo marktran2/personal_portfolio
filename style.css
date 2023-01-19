@@ -32,6 +32,11 @@ html {
 #logoname:hover {
     color: black;
     font-weight: 600px;
+    transition: 0.2s;
+}
+
+#logoname:active {
+    transform: translateY(2px);
 }
 
 .other_part {
@@ -54,6 +59,12 @@ html {
 .other_part_text:hover {
     color: black;
     font-weight: 500;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.other_part_text:active {
+    transform: translateY(2px);
 }
 
 
@@ -87,8 +98,20 @@ html {
 
 .navigation_bar button:hover {
     background-color: #3F26C5;
+    cursor: pointer;
     font-weight: 500px;
+    transition: 0.3s;
 }
+
+.navigation_bar button:active {
+    background-color: #3F26C5;
+    box-shadow: 0 1px #666;
+    transform: translateY(2px);
+}
+
+.navigation_bar a:link { text-decoration: none;  color: #584B9D;}
+.navigation_bar a:visited { text-decoration: none; color: #584B9D;}
+.navigation_bar a:active { text-decoration: none;  color: #584B9D;}
 
 .describing_me {
     font-family: 'Roboto Mono', monospace;
@@ -124,12 +147,28 @@ html {
 }
 
 .contact_icons {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-left: clamp(40px, 2vw, 100px);
     padding-right: clamp(40px, 2vw, 100px);
     height: 100px;
+
+    animation: MoveUpDown 2s linear infinite;
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+        bottom: 0px
+    }
+    50% {
+        bottom: 20px;
+    }
+}
+
+.contact_icons img:active {
+    transform: translateY(2px);
 }
 
 .vert_line {
@@ -147,27 +186,31 @@ html {
     height: 350px;
 }
 
-.go_top_button {
+.go_top img:hover {
+    background-color: #f7d672;
+    transition: 0.3s;
+}
+
+.go_top img:active {
+    background-color: #f7d672;
+    /* box-shadow: 0 0.5px #666; */
+    transform: translateY(3px);
+}
+
+.go_top img {
     position: fixed;
     width: 30px;
     height: 30px;
     background-color: transparent;
+    padding: 10px;
     bottom: 40px;
     right: 50px;
-
-    text-align: center;
     
+    border-radius: 50px;
+    
+    text-align: center;
 }
 
-.go_top img {
-    height: 30px;
-    /* display: flex; */
-    align-items: center;
-}
-
-.navigation_bar a:link { text-decoration: none;  color: #584B9D;}
-.navigation_bar a:visited { text-decoration: none; color: #584B9D;}
-.navigation_bar a:active { text-decoration: none;  color: #584B9D;}
 
 
 .circle_stairs_container_1 {
@@ -301,8 +344,13 @@ html {
     font-size: 20px;    
 }
 
-.curvy_part_container:hover {
+.curvy_part_container h1:hover {
     color: #584B9D;
+    cursor: pointer;
+}
+
+.curvy_part_container h1:active {
+    transform: translateY(2px);
 }
 
 
@@ -390,6 +438,12 @@ html {
 
 .projects_description:hover {
     color: #584B9D;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.projects_description:active {
+    transform: translateY(2px);
 }
 
 .projects_description h1 {
@@ -531,22 +585,25 @@ html {
 
 .linkedin_wrapper a:link { text-decoration: none;  color: black;}
 .linkedin_wrapper a:visited { text-decoration: none; color: black;}
-.linkedin_wrapper a:active { text-decoration: none;  color: black;}
+.linkedin_wrapper a:active {box-shadow: 0 1px #666; transform: translateY(2px);}
 .linkedin_wrapper a:hover { color: #DCB239;}
 
 .facebook_wrapper a:link { text-decoration: none;  color: black;}
 .facebook_wrapper a:visited { text-decoration: none; color: black;}
-.facebook_wrapper a:active { text-decoration: none;  color: black;}
+.facebook_wrapper a:active {box-shadow: 0 1px #666; transform: translateY(2px);}
 .facebook_wrapper a:hover { color: #DCB239;}
 
 .instagram_wrapper a:link { text-decoration: none;  color: black;}
 .instagram_wrapper a:visited { text-decoration: none; color: black;}
-.instagram_wrapper a:active { text-decoration: none;  color: black;}
+.instagram_wrapper a:active {box-shadow: 0 1px #666; transform: translateY(2px);}
 .instagram_wrapper a:hover { color: #DCB239;}
 
 .twitter_wrapper a:link { text-decoration: none;  color: black;}
 .twitter_wrapper a:visited { text-decoration: none; color: black;}
-.twitter_wrapper a:active { text-decoration: none;  color: black;}
+.twitter_wrapper a:active {
+    box-shadow: 0 1px #666;
+    transform: translateY(2px);
+}
 .twitter_wrapper a:hover { color: #DCB239;}
 
 .discord_wrapper p:hover {
@@ -555,7 +612,7 @@ html {
 
 .github_wrapper a:link { text-decoration: none;  color: black;}
 .github_wrapper a:visited { text-decoration: none; color: black;}
-.github_wrapper a:active { text-decoration: none;  color: black;}
+.github_wrapper a:active {box-shadow: 0 1px #666; transform: translateY(2px);}
 .github_wrapper a:hover { color: #DCB239;}
 
 
@@ -566,5 +623,12 @@ html {
     font-family: 'Roboto Mono', monospace;
     font-size: 20px;
 
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
+
+
+
+/* .dark {
+    background-color: black;
+    color: white;
+} */
